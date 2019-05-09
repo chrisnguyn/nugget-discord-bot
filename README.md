@@ -11,7 +11,7 @@ Link to invite to servers: https://discordapp.com/oauth2/authorize?&client_id=57
 
 !nuggetshelp - lists all available commands
 
-!nuggets [number] [pounds / lb / kilograms / kg] - converts mass and chosen unit of measurement to number of chicken nuggets
+!nuggets [number] [pounds / lb / kilograms / kg] - converts mass and chosen unit to number of chicken nuggets
 
 !nuggetamount [number] - converts [number] amount of chicken nuggets into respective number of pounds and kilograms [number] is equal to
 
