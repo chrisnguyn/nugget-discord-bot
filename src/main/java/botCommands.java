@@ -9,10 +9,10 @@ public class botCommands extends ListenerAdapter {
         double numberToConvert = 0;
         String[] messageSent = event.getMessage().getContentRaw().split(" "); // if a user enters more than 1 word, turn that message into an array split by a space character.
 
-        /* COMMAND - !NUGGETSHELP. SAMPLE INPUT "!help" */
+        /* COMMAND - !NUGGETSHELP. SAMPLE INPUT "!nuggetshelp" */
         if (messageSent[0].equalsIgnoreCase("!nuggetshelp"))
         {
-            event.getChannel().sendMessage("\"!nuggets\" [number] [pounds / lbs / kilograms / kg] to calculate a weight in chicken nuggets, \"!cost [number] gives the cost of that number of chicken nuggets\", \"!math\" to get a breakdown of the math.");
+            event.getChannel().sendMessage("\"!nuggets\" [number] [pounds / lbs / kilograms / kg] to calculate a weight in chicken nuggets, \"!cost [number] gives the cost of that number of chicken nuggets\", \"!math\" to get a breakdown of the math.").queue();
         }
 
         /* COMMAND - !NUGGETAMOUNT. SAMPLE INPUT "!nuggetamount 1217" */
