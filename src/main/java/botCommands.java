@@ -46,6 +46,17 @@ public class botCommands extends ListenerAdapter {
             }
         }
 
+        /* COMMAND - !COST. SAMPLE INPUT "!cost 3421" */
+        else if (messageSent[0].equalsIgnoreCase("!cost"))
+        {
+            numberToConvert = Double.parseDouble(messageSent[1]);
+            double costOfNugget = 0.862;
+            double totalCost = numberToConvert * 0.862;
+
+            String toPrint = messageSent[1] + String.format(" chicken nuggets would cost %.2f CAD", totalCost);
+            event.getChannel().sendMessage(toPrint).queue();
+        }
+
         /* COMMAND - !MATH. SAMPLE INPUT "!math" */
         else if (messageSent[0].equalsIgnoreCase("!math"))
         {
