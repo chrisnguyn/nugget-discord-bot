@@ -5,7 +5,7 @@ public class main {
 
     public static void main(String[] args) throws Exception
     {
-        JDA build = new JDABuilder("NTc1MjkyOTQ3MDk2OTI4MjU3.XNSGRA.hW_w75qk0ut7_A8bpvLpBdLYK_I").build();
+        JDA build = new JDABuilder("TOKEN GOES HERE").build();
 
         build.addEventListener(new botCommands());
     }

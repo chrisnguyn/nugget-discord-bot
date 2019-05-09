@@ -5,14 +5,14 @@ Link to invite to servers: https://discordapp.com/oauth2/authorize?&client_id=57
 
 **New command as of 05/09/2019:**
 
-!cost [number] - prints cost of [number] of chicken nuggets (called McDonalds to get an accurate cost per individual chicken nugget; explained in !math)
+!cost [number] - prints total cost of [number] of chicken nuggets in CAD (called McDonalds to estimate an accurate cost per individual chicken nugget; explained in !math)
 
 **Available commands as of 05/09/2019:**
 
 !nuggetshelp - lists all available commands
 
-!nuggets [number] [pounds / lb / kilograms / kg] - converts mass and chosen unit of measurement to chicken nuggets
+!nuggets [number] [pounds / lb / kilograms / kg] - converts mass and chosen unit to number of chicken nuggets
 
-!nuggetamount [number] - converts [number] amount of chicken nuggets into how many pounds and kilograms it is equal to.
+!nuggetamount [number] - converts [number] amount of chicken nuggets into respective number of pounds and kilograms [number] is equal to
 
-!math - provides a detailed explanation of the math breakdown
+!math - provides a detailed explanation of all math calculations and their breakdown
