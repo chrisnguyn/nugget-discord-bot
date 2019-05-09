@@ -9,10 +9,10 @@ public class botCommands extends ListenerAdapter {
         double numberToConvert = 0;
         String[] messageSent = event.getMessage().getContentRaw().split(" "); // if a user enters more than 1 word, turn that message into an array split by a space character.
 
-        /* COMMAND - !HELP. SAMPLE INPUT "!help" */
-        if (messageSent[0].equalsIgnoreCase("!help"))
+        /* COMMAND - !NUGGETSHELP. SAMPLE INPUT "!help" */
+        if (messageSent[0].equalsIgnoreCase("!nuggetshelp"))
         {
-            event.getChannel().sendMessage("\"!nuggets\" [number] [pounds / lbs / kilograms / kg] to calculate a weight in chicken nuggets, \"!math\" to get a breakdown of the math.");
+            event.getChannel().sendMessage("\"!nuggets\" [number] [pounds / lbs / kilograms / kg] to calculate a weight in chicken nuggets, \"!cost [number] gives the cost of that number of chicken nuggets\", \"!math\" to get a breakdown of the math.");
         }
 
         /* COMMAND - !NUGGETAMOUNT. SAMPLE INPUT "!nuggetamount 1217" */
@@ -60,9 +60,12 @@ public class botCommands extends ListenerAdapter {
         /* COMMAND - !MATH. SAMPLE INPUT "!math" */
         else if (messageSent[0].equalsIgnoreCase("!math"))
         {
-            event.getChannel().sendMessage("There are 17.5 grams in an average chicken nugget from McDonalds.").queue();
-            event.getChannel().sendMessage("Since there are 453.592 grams in a pound, this means there are 25.919 chicken nuggets in one pound. Multiplying this by the amount of pounds you weigh gives your mass in chicken nuggets.").queue();
-            event.getChannel().sendMessage("Since there are 1000 grams in a kilogram, this means there are 57.142 chicken nuggets in one kilogram. Multiplying this by the amount of kilograms you weigh gives your mass in chicken nuggets.").queue();
+            event.getChannel().sendMessage(
+                    "There are 17.5 grams in the average chicken nugget from McDonalds.\n\n"+
+                            "Since there are 453.592 grams in a pound, this means there are (453.592 / 17.5), about 25.919 chicken nuggets in one pound. Multiplying this by the amount of pounds you weigh gives yours mass in chicken nuggets.\n\n"+
+                            "Since there are 1000 grams in a kilogram, this means there are (1000 / 17.5), about 57.142 chicken nuggets in one kilogram. Multiplying this by the amount of kilograms you weigh gives your mass in chicken nuggets.\n\n"+
+                            "Upon calling McDonalds and getting the price of 6 nuggets ($6.527 CAD including tax), 10 nuggets ($9.028 CAD including tax), and 20 nuggets ($11.853 CAD including tax), I found the individual price of a chicken nugget to be $1.09, $0.90, and $0.59 respectively. I will be using the average of these three, $0.86, to be the price of a single chicken nugget. Multiplying $0.86 by the number of nuggets gives total cost in CAD."
+            ).queue();
         }
 
         else
