@@ -12,10 +12,10 @@ public class botCommands extends ListenerAdapter {
         /* COMMAND - !NUGGETSHELP. SAMPLE INPUT "!nuggetshelp" */
         if (messageSent[0].equalsIgnoreCase("!nuggetshelp"))
         {
-            event.getChannel().sendMessage("\"!nuggets [number] [pounds / lbs / kilograms / kg]\" to calculate a weight in chicken nuggets\n\n"+
-                    "\"!nuggetamount [number]\" converts number of chicken nuggets to respective weight in pounds and kilograms\n\n"+
-                    "\"!cost [number]\" gives the cost of that number of chicken nuggets\n\n"+
-                    "\"!math\" to get a breakdown of the math.").queue();
+            event.getChannel().sendMessage("**\"!nuggets [number] [pounds, lbs, kilograms, or kg]\"** to calculate a weight in chicken nuggets.\n\n"+
+                    "**\"!nuggetamount [number]\"** converts number of chicken nuggets to respective weight in pounds and kilograms.\n\n"+
+                    "**\"!cost [number]\"** gives the cost of that number of chicken nuggets.\n\n"+
+                    "**\"!math\"** to get a breakdown of the math.").queue();
         }
 
         /* COMMAND - !NUGGETAMOUNT. SAMPLE INPUT "!nuggetamount 1217" */
@@ -56,7 +56,7 @@ public class botCommands extends ListenerAdapter {
             double costOfNugget = 0.862;
             double totalCost = numberToConvert * 0.862;
 
-            String toPrint = messageSent[1] + String.format(" chicken nuggets would cost %.2f CAD", totalCost);
+            String toPrint = messageSent[1] + String.format(" chicken nuggets would cost approximately %.2f CAD.", totalCost);
             event.getChannel().sendMessage(toPrint).queue();
         }
 
