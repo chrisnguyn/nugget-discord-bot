@@ -9,8 +9,8 @@ public class botCommands extends ListenerAdapter {
         double numberToConvert = 0;
         String[] messageSent = event.getMessage().getContentRaw().split(" "); // if a user enters more than 1 word, turn that message into an array split by a space character.
 
-        /* COMMAND - !NUGGETSHELP. SAMPLE INPUT "!nuggetshelp" */
-        if (messageSent[0].equalsIgnoreCase("!nuggetshelp"))
+        /* COMMAND - !NUGGETSHELP. SAMPLE INPUT "!nuggetcommands" */
+        if (messageSent[0].equalsIgnoreCase("!nuggetcommands"))
         {
             event.getChannel().sendMessage("**\"!nuggets [number] [pounds, lbs, kilograms, or kg]\"** to calculate a weight in chicken nuggets.\n\n"+
                     "**\"!nuggetamount [number]\"** converts number of chicken nuggets to respective weight in pounds and kilograms.\n\n"+
